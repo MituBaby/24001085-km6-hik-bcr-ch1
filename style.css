@@ -3,11 +3,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 80px 0 80px;
+  padding: 0 130px 0 200px;
   background-color: #f1f3ff;
 }
 
-.kosong {
+.logo {
   width: 100px;
   height: 34px;
   background-color: #0d28a6;
@@ -18,36 +18,98 @@
   gap: 50px;
 }
 
+.navbar h5:hover {
+  cursor: pointer;
+  border-bottom: 2px solid darkslategray;
+}
+
+#btn {
+  background-color: #5cb85f;
+  color: white;
+  font-weight: 700;
+  border-radius: 0;
+}
+
 .hero {
   width: 100%;
-  height: 407px;
+  /* height: 407px; */
+  height: fit-content;
   background-color: #f1f3ff;
   display: flex;
   justify-content: space-between;
 }
 
 .section1 {
-  width: 100%;
-  height: 100%;
+  /* width: fit-content; */
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   /* border: 1px solid black; */
-  padding: 0 0 0 80px;
+  padding-left: 200px;
 }
 
 .sewa {
   /* border: 1px solid black; */
   font-weight: 700;
-  font-size: x-large;
+  font-size: 36px;
+  /* width: 100%; */
 }
 
-.section1 p {
+.desc-rental {
   width: 468px;
   height: 60px;
 }
 
 #btn-sewa {
   width: fit-content;
+  background-color: #5cb85f;
+  color: white;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+.section2 {
+  width: 70%;
+  /* border: 1px solid black; */
+}
+.car-img {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+@media (max-width: 430px) {
+  .navigation {
+    padding-left: 10px;
+    padding-right: unset;
+    border: 1px solid black;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .btn-close-nav {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .section1 {
+    padding-left: 10px;
+  }
+
+  .desc-rental {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+  }
+
+  .section2 {
+    width: unset;
+    padding-left: 10px;
+  }
 }
