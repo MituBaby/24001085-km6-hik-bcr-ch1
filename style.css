@@ -18,8 +18,13 @@
   gap: 50px;
 }
 
-.navbar h5:hover {
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  /* cursor: pointer; */
   border-bottom: 2px solid darkslategray;
 }
 
@@ -115,10 +120,22 @@
   font-weight: bold;
 }
 
-.testimonial {
+/* .testimonial {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+} */
+
+.head-testi {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.carousel {
+  scale: 0.6;
 }
 
 .card-slider {
@@ -128,10 +145,10 @@
   /* border-radius: 10px; */
 }
 
-.card-body {
+/* .card-body {
   background-color: #f1f3ff;
   border: unset;
-}
+} */
 
 /* .carousel {
   background-color: #f1f3ff;
@@ -172,17 +189,25 @@
   /* justify-content: center; */
   align-items: center;
   text-align: left;
+  /* border: 1px solid black; */
 }
 
 .list-faq {
+  /* border: 1px solid black; */
   width: 50%;
+}
+
+.accordion {
+  width: 80%;
 }
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 50px;
   margin-top: 100px;
+  width: 80%;
+  /* border: 1px solid black; */
 }
 
 .naf {
@@ -200,13 +225,42 @@
     display: none;
   }
 
+  .navbar.active {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    background-color: white;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    justify-content: flex-start;
+  }
+
+  #bg-nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000099;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
   .btn-nav {
     display: unset;
     padding-right: 20px;
   }
 
-  .btn-close-nav {
-    display: none;
+  .btn-close-nav.active {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    right: 10px;
+    top: 10px;
   }
 
   .hero {
@@ -265,6 +319,10 @@
     margin: 0 10px 0 10px;
   }
 
+  .carousel {
+    scale: 1;
+  }
+
   #profil {
     /* padding: 3rem 10rem 3rem 10rem !important; */
     display: flex;
@@ -288,6 +346,10 @@
   }
 
   .list-faq {
+    width: unset;
+  }
+
+  .accordion {
     width: unset;
   }
 
