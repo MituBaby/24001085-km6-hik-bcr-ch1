@@ -14,8 +14,11 @@
 }
 
 .navbar {
-  /* border: 1px solid black; */
   gap: 50px;
+}
+
+#BCR {
+  display: none;
 }
 
 a {
@@ -24,7 +27,6 @@ a {
 }
 
 a:hover {
-  /* cursor: pointer; */
   border-bottom: 2px solid darkslategray;
 }
 
@@ -45,7 +47,6 @@ a:hover {
 
 .hero {
   width: 100%;
-  /* height: 407px; */
   height: fit-content;
   background-color: #f1f3ff;
   display: flex;
@@ -54,21 +55,15 @@ a:hover {
 }
 
 .section1 {
-  /* width: fit-content; */
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* border: 1px solid black; */
   padding-left: 200px;
 }
 
 .sewa {
-  /* border: 1px solid black; */
   font-weight: 700;
   font-size: 36px;
-  /* width: 100%; */
 }
 
 .desc-rental {
@@ -86,11 +81,9 @@ a:hover {
 
 .section2 {
   width: 70%;
-  /* border: 1px solid black; */
 }
 .car-img {
   width: 100%;
-  /* border: 1px solid black; */
 }
 
 .our-service {
@@ -116,16 +109,13 @@ a:hover {
   padding-right: 200px;
 }
 
-.row h2 {
+h6 {
   font-weight: bold;
 }
 
-/* .testimonial {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-} */
+.row h2 {
+  font-weight: bold;
+}
 
 .head-testi {
   display: flex;
@@ -142,25 +132,106 @@ a:hover {
   width: 1000px;
   height: 200px;
   background-color: #f1f3ff;
-  /* border-radius: 10px; */
 }
 
-/* .card-body {
-  background-color: #f1f3ff;
-  border: unset;
-} */
+.testimonial {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
 
-/* .carousel {
-  background-color: #f1f3ff;
-} */
+/* start testi */
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f3ff;
+  border-radius: 8px;
+}
 
-/* .text-body-primary {
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: left;
+}
+
+#card {
+  display: flex;
+}
+
+.picture {
+  width: 30%;
+}
+
+.text-testi {
+  width: 70%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
   font-weight: bold;
-} */
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-/* .col-md-4 {
-  border: 1px solid black;
-} */
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic;
+}
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue;
+}
+/* end testi */
 
 .bannerr {
   width: 80%;
@@ -186,14 +257,11 @@ a:hover {
   width: 50%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   text-align: left;
-  /* border: 1px solid black; */
 }
 
 .list-faq {
-  /* border: 1px solid black; */
   width: 50%;
 }
 
@@ -207,18 +275,16 @@ a:hover {
   gap: 50px;
   margin-top: 100px;
   width: 80%;
-  /* border: 1px solid black; */
 }
 
 .naf {
   font-weight: bold;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 884px) {
   .navigation {
     padding-left: 10px;
     padding-right: unset;
-    /* border: 1px solid black; */
   }
 
   .navbar {
@@ -240,6 +306,11 @@ a:hover {
     justify-content: flex-start;
   }
 
+  #BCR {
+    display: unset;
+    font-weight: bolder;
+  }
+
   #bg-nav {
     position: fixed;
     width: 100%;
@@ -259,7 +330,7 @@ a:hover {
     display: flex;
     position: fixed;
     z-index: 5;
-    right: 10px;
+    right: 15px;
     top: 10px;
   }
 
@@ -269,6 +340,7 @@ a:hover {
 
   .section1 {
     padding-left: 10px;
+    margin-top: 34px;
   }
 
   .desc-rental {
@@ -323,12 +395,31 @@ a:hover {
     scale: 1;
   }
 
+  .testimonial {
+    width: 90%;
+  }
+
+  #card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mySlides {
+    padding: unset;
+  }
+
+  .picture {
+    padding: unset !important;
+  }
+
+  .text-testi span {
+    padding-left: 25%;
+  }
+
   #profil {
-    /* padding: 3rem 10rem 3rem 10rem !important; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
   }
 
   .card-body span {
